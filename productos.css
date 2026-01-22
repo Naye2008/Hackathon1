@@ -55,6 +55,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+.text-center {
+  text-align: center;
+  margin: 40px 0;
+}
 
 .card {
   margin-bottom: 30px;
@@ -70,9 +74,18 @@ body {
     padding-top: 30px;
 }
 
-.card-text, .card-title{
+.card-text{
+    text-align: center;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.card-title{
     text-align: center;
     height: 60px;
     margin-bottom: 5px;
     
+}
+.card-price{
+    text-align: center;
+    font-weight: bold;
 }
