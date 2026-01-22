@@ -2,29 +2,47 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Página cargada correctamente");
 });
 /* Esto es para el carrusel del fondo del Hero */
-const imagenesFondo = [
-    'url("https://media.blackandwhite-ff.com/10000/10000/b6e96b4a-21c1-47b8-bfb2-c22bc1110717_Content_Banner_800x400-HERO.jpg")',
-    'url("https://estaticos-cdn.prensaiberica.es/clip/7fddbba4-0c83-4dde-8847-c42e2035a039_alta-libre-aspect-ratio_default_0.jpg")',
-    'url("https://media.gq.com.mx/photos/5be9e3ca4577ab26054abb1b/16:9/w_1792,h_1008,c_limit/tenis_correr_7254.jpg")',
-    'url("https://img.freepik.com/foto-gratis/retrato-joven-mujer-deportiva-atando-sus-zapatillas-deporte-tomar-su-sesion-diaria-jogging_197531-22387.jpg?semt=ais_hybrid&w=740&q=80")'
+// 1. Definimos un objeto con la imagen y su enlace correspondiente
+const colecciones = [
+    {
+        img: 'url("https://media.blackandwhite-ff.com/10000/10000/b6e96b4a-21c1-47b8-bfb2-c22bc1110717_Content_Banner_800x400-HERO.jpg")',
+        link: '/productos.html' // Enlace correspondiente -> Esta imagen deberia mandar a hombres
+    },
+    {
+        img: 'url("https://estaticos-cdn.prensaiberica.es/clip/7fddbba4-0c83-4dde-8847-c42e2035a039_alta-libre-aspect-ratio_default_0.jpg")',
+        link: '/productos.html' // -> este enlace a mujeres
+    },
+    {
+        img: 'url("https://media.gq.com.mx/photos/5be9e3ca4577ab26054abb1b/16:9/w_1792,h_1008,c_limit/tenis_correr_7254.jpg")',
+        link: '/productos.html' // -> Este enlace a Hombres
+    },
+    {
+        img: 'url("https://img.freepik.com/foto-gratis/retrato-joven-mujer-deportiva-atando-sus-zapatillas-deporte-tomar-su-sesion-diaria-jogging_197531-22387.jpg?semt=ais_hybrid&w=740&q=80")',
+        link: '/productos.html' // -> Este enlace a mujeres
+    }
 ];
 
 let indiceActual = 0;
 const heroSection = document.querySelector('.hero');
+const heroBtn = document.querySelector('.hero .btn'); // Seleccionamos el botón
 
 function cambiarFondo() {
-    indiceActual = (indiceActual + 1) % imagenesFondo.length;
-    // Aplicamos la imagen al estilo del pseudo-elemento mediante una variable CSS
-    // o directamente al background del hero si no usas before
-    heroSection.style.backgroundImage = imagenesFondo[indiceActual];
+    indiceActual = (indiceActual + 1) % colecciones.length;
+    const datosNuevos = colecciones[indiceActual];
+    // Cambiar la imagen de fondo
+    heroSection.style.backgroundImage = datosNuevos.img;
+    // Cambiar el enlace del botón
+    heroBtn.setAttribute('href', datosNuevos.link);
 }
+
 // Iniciar carrusel automático cada 5 segundos
 setInterval(cambiarFondo, 5000);
 
-// Establecer la primera imagen al cargar
-window.onload = () => {
-    heroSection.style.backgroundImage = imagenesFondo[0];
-};
+// Establecer el estado inicial al cargar la página
+window.addEventListener('load', () => {
+    heroSection.style.backgroundImage = colecciones[0].img;
+    heroBtn.setAttribute('href', colecciones[0].link);
+});
 /* Aqui termina */
 /* Aqui inicia el carrusel de productos */
 function scrollCarousel(direction) {
