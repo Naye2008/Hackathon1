@@ -147,6 +147,52 @@ body {
   margin-top: 50px;
 }
 
+
+/* Carrito Flotante */
+.floating-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+
+.floating-cart:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.cart-icon {
+    font-size: 24px;
+}
+
+.floating-cart .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+/* Animación Opcional de Bounce */
+.bounce {
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .products-grid {
@@ -160,4 +206,5 @@ body {
   .nav {
     display: none;
   }
+
 }
