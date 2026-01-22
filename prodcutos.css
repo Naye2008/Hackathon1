@@ -1,0 +1,9 @@
+/* Colores elegantes: Blanco/gris claro para fondos, azul para acentos */
+body {
+    background-color: #F8F; /* Gris claro elegante */
+    font-family: 'Arial', sans-serif;
+}
+.navbar {
+    background-color: #FFFFFF !important; /* Blanco para elegancia */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
