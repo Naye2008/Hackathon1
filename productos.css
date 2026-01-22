@@ -89,3 +89,21 @@ body {
     text-align: center;
     font-weight: bold;
 }
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column; /* Apila logo, nav e iconos */
+    gap: 15px;
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav a {
+    margin: 5px 10px;
+  }
+  .card-img-top {
+    height: 150px; /* Un poco más grande en móviles para que se aprecie */
+  }
+}
