@@ -6,19 +6,20 @@
   <title> Generation Tennis | Inicio</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styless.css" />
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="header">
     <div class="container header-content">
-      <h1 class="logo">Generation Tennis</h1>
+      <a href="/index.html">
+                <h1 class="logo">Generation Tennis</h1>
+            </a>
 
       <nav class="nav">
-        <a href="#">Hombre</a>
-        <a href="#">Mujer</a>
-        <a href="#">Ofertas</a>
+        <a href="/productos.html">Hombre</a>
+        <a href="/mujer/mujer.html">Mujer</a>
       </nav>
 
       <div class="icons">
@@ -37,59 +38,90 @@
     </div>
   </section>
 
-  <!-- CATEGORÍAS -->
-  <section class="categories container">
-    <div class="category-card">Calzado</div>
-
-  </section>
-
   <!-- PRODUCTOS -->
   <section class="products container">
-    <h2>Productos Destacados</h2>
-
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="" alt="Tenis">
+  <h2>Productos Destacados</h2>
+  
+  <div class="carousel-wrapper">
+    <button class="arrow-btn prev" onclick="scrollCarousel(-1)">❮</button>
+    
+    <div class="products-grid" id="productGrid">
+      
+       <div class="product-card">
+        <img src="https://nasor741.com/cdn/shop/files/MODO1BLANCO.jpg?v=1685929281" alt="Tenis deportivo">
         <h3>Tenis Deportivo</h3>
         <p>$0 MXN</p>
         <button class="add-cart-btn">Comprar</button>
       </div>
 
       <div class="product-card">
-        <img src="" alt="tenis">
+        <img src="https://img.kwcdn.com/product/open/2023-11-12/1699812251988-ca087a0918d34280a5b7fa06d26500a8-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="Tenis Basketball">
         <h3>Tenis para basketball</h3>
         <p>$0 MXN</p>
         <button class="add-cart-btn">Comprar</button>
       </div>
 
       <div class="product-card">
-        <img src="" alt="tenis">
+        <img src="https://ae01.alicdn.com/kf/Sf6abff1218e34df3a676928325b053d4q.jpg" alt="tenis Football">
         <h3>Tenis para Football</h3>
         <p>$0 MXN</p>
         <button class="add-cart-btn">Comprar</button>
       </div>
+      
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/419xd36cOdL._AC_SY900_.jpg" alt="Tenis Basketball">
+        <h3>Tenis para Running</h3>
+        <p>$0 MXN</p>
+        <button>Comprar</button>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61LTcdqB1IL._AC_SY500_.jpg" alt="Tenis running">
+        <h3>Columbia Transverse Hike</h3>
+        <p>$0 MXN</p>
+        <button>Comprar</button>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81ety6a+1iL._AC_SY500_.jpg" alt="Tenis deportivo">
+        <h3>Salomon Génesis</h3>
+        <p>$0 MXN</p>
+        <button>Comprar</button>
+      </div>
+
 
       <div class="product-card">
-        <img src="" alt="Tenis running">
-        <h3>Tenis Running</h3>
+        <img src="https://m.media-amazon.com/images/I/61yoUM3C86L._AC_SX395_.jpg" alt="tenis Football">
+        <h3>Under Armour Curry 3Z 24</h3>
+        <p>$0 MXN</p>
+        <button>Comprar</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/51ninUJpmqL._AC_SY500_.jpg" alt="Tenis running">
+        <h3>Adidas Originals Tokyo</h3>
         <p>$0 MXN</p>
         <button class="add-cart-btn">Comprar</button>
       </div>
+
     </div>
-  </section>
+
+    <button class="arrow-btn next" onclick="scrollCarousel(1)">❯</button>
+  </div>
+</section>
+
+<!-- Carrito Flotante -->
+<div id="floating-cart" class="floating-cart">
+  <span class="cart-icon">🛒</span>
+  <span id="cart-count" class="badge bg-primary">0</span>
+</div>
+
+<!-- JS -->
+<script src="/main.js"></script>
+</body>
+</html>
 
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 Generation Tennis. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Carrito Flotante -->
-<div id="floating-cart" class="floating-cart">
-    <span class="cart-icon">🛒</span>
-    <span id="cart-count" class="badge bg-primary">0</span>
-</div>
-
-  <!-- JS -->
-  <script src="main.js"></script>
-</body>
-</html>
