@@ -34,6 +34,10 @@ body {
   font-size: 24px;
   font-weight: bold;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
 .nav a {
   color: #fff;
@@ -106,4 +110,12 @@ body {
   .card-img-top {
     height: 150px; /* Un poco más grande en móviles para que se aprecie */
   }
+}
+/* FOOTER */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
 }
