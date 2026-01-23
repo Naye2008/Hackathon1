@@ -273,7 +273,12 @@ span.cart-icon {
     color: black;
 }
 @media (max-width: 768px) {
- .nav {
+  .header-content {
+    flex-direction: column; /* Apila logo, nav e iconos */
+    gap: 15px;
+    text-align: center;
+  }
+  .nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -281,7 +286,10 @@ span.cart-icon {
   .nav a {
     margin: 5px 10px;
   }
-  .card-img-top {
-    height: 150px; /* Un poco más grande en móviles para que se aprecie */
-  }
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
 }
