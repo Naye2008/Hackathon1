@@ -272,3 +272,16 @@ span.cart-icon {
     background: #00ffcc;
     color: black;
 }
+
+ .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav a {
+    margin: 5px 10px;
+  }
+  .card-img-top {
+    height: 150px; /* Un poco más grande en móviles para que se aprecie */
+  }
+}
