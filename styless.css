@@ -272,7 +272,7 @@ span.cart-icon {
     background: #00ffcc;
     color: black;
 }
-
+@media (max-width: 768px) {
  .nav {
     display: flex;
     flex-wrap: wrap;
