@@ -6,19 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
 const colecciones = [
     {
         img: 'url("https://media.blackandwhite-ff.com/10000/10000/b6e96b4a-21c1-47b8-bfb2-c22bc1110717_Content_Banner_800x400-HERO.jpg")',
-        link: '/productos.html' // Enlace correspondiente -> Esta imagen deberia mandar a hombres
+        link: './productos.html' // Enlace correspondiente -> Esta imagen deberia mandar a hombres
     },
     {
         img: 'url("https://estaticos-cdn.prensaiberica.es/clip/7fddbba4-0c83-4dde-8847-c42e2035a039_alta-libre-aspect-ratio_default_0.jpg")',
-        link: '/mujer/mujer.html' // -> este enlace a mujeres
+        link: './mujer/mujer.html' // -> este enlace a mujeres
     },
     {
         img: 'url("https://media.gq.com.mx/photos/5be9e3ca4577ab26054abb1b/16:9/w_1792,h_1008,c_limit/tenis_correr_7254.jpg")',
-        link: '/productos.html' // -> Este enlace a Hombres
+        link: './productos.html' // -> Este enlace a Hombres
     },
     {
         img: 'url("https://img.freepik.com/foto-gratis/retrato-joven-mujer-deportiva-atando-sus-zapatillas-deporte-tomar-su-sesion-diaria-jogging_197531-22387.jpg?semt=ais_hybrid&w=740&q=80")',
-        link: '/mujer/mujer.html' // -> Este enlace a mujeres
+        link: './mujer/mujer.html' // -> Este enlace a mujeres
     }
 ];
 
